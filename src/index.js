@@ -60,8 +60,6 @@ class Node extends EventEmitter {
 
       this.swarm.on('peer-mux-closed', (peerInfo) => {
         this.emit('peer:disconnect', peerInfo)
-        // TODO remove this line
-        this.peerBook.removeByB58String(peerInfo.id.toB58String())
       })
     }
 
